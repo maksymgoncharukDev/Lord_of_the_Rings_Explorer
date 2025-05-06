@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOTR Quotes</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+        h1 { color: #333; }
+        blockquote { background: white; padding: 10px; margin-bottom: 15px; border-left: 5px solid #4CAF50; border-radius: 5px; }
+        a.button { text-decoration: none; padding: 10px 20px; background: #4CAF50; color: white; border-radius: 5px; margin-right: 10px; }
+        a.button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>📜 Random LOTR Quotes</h1>
+    {% for quote in quotes %}
+        <blockquote>{{ quote.dialog }}</blockquote>
+    {% endfor %}
+
+    <a class="button" href="/">⬅️ Back to Characters</a>
+    <a class="button" href="/movies">🎬 Movies</a>
+</body>
+</html>

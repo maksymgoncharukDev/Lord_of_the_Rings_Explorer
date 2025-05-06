@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOTR Movies</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+        h1 { color: #333; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #4CAF50; color: white; }
+        a.button { text-decoration: none; padding: 10px 20px; background: #4CAF50; color: white; border-radius: 5px; margin-right: 10px; }
+        a.button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>🎬 LOTR & Hobbit Movies</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Runtime (min)</th>
+            <th>Budget ($M)</th>
+            <th>Box Office ($M)</th>
+            <th>Oscars</th>
+            <th>Rotten Tomatoes</th>
+        </tr>
+        {% for movie in movies %}
+        <tr>
+            <td>{{ movie.name }}</td>
+            <td>{{ movie.runtimeInMinutes }}</td>
+            <td>{{ movie.budgetInMillions }}</td>
+            <td>{{ movie.boxOfficeRevenueInMillions }}</td>
+            <td>{{ movie.academyAwardWins }}</td>
+            <td>{{ movie.rottenTomatoesScore }}%</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a class="button" href="/">⬅️ Back to Characters</a>
+    <a class="button" href="/quotes">📜 Quotes</a>
+</body>
+</html>
